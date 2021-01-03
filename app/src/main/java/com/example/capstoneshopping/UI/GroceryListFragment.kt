@@ -1,4 +1,7 @@
 package com.example.capstoneshopping.UI
 
-class GroceryListFragment {
+import androidx.fragment.app.Fragment
+
+class GroceryListFragment : Fragment(){
+
 }

@@ -6,7 +6,7 @@
     <string name="release">Release: </string>
     <string name="product">Product</string>
     <string name="dateAdded">Date Added</string>
-    <string name="not_valid_game">Alle velden moeten ingevuld zijn!</string>
+    <string name="no_product">Please enter a product.</string>
     <string name="deleted_games">Deleted all games</string>
 
 </resources>
