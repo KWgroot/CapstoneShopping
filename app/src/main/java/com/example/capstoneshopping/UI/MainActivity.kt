@@ -12,9 +12,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.example.capstoneshopping.R
+import com.example.capstoneshopping.Viewmodel.Grocery
 import com.example.capstoneshopping.Viewmodel.GroceryViewModel
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_item_add.*
+import java.time.LocalDate
+import java.time.ZoneId
+import java.time.ZonedDateTime
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -75,7 +81,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (resultCode == Activity.RESULT_OK){
+        if (resultCode == Activity.RESULT_OK) {
             val result =
                 IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
             if (result != null) {
@@ -84,6 +90,20 @@ class MainActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Scanned: " + result.contents, Toast.LENGTH_LONG)
                         .show()
+                    val groceryName = result.contents
+
+                    val currentDate = LocalDate.now()
+                    val resultDate: ZonedDateTime = currentDate.atStartOfDay(ZoneId.systemDefault())
+
+                    if (groceryName.isNotBlank()) {
+                        viewModel.insertGrocery(
+                            Grocery(
+                                groceryName, Date.from(resultDate.toInstant())
+                            )
+                        )
+                    } else {
+                        Toast.makeText(this, R.string.no_product, Toast.LENGTH_SHORT).show()
+                    }
                 }
             } else {
                 super.onActivityResult(requestCode, resultCode, data)
