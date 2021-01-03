@@ -8,5 +8,6 @@
     <string name="dateAdded">Date Added</string>
     <string name="no_product">Please enter a product.</string>
     <string name="deleted_groceries">Cleared fridge.</string>
+    <string name="scan_barcode">Scan barcode</string>
 
 </resources>

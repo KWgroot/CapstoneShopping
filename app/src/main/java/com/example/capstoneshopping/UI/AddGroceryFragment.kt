@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.capstoneshopping.R
 import com.example.capstoneshopping.Viewmodel.Grocery
 import com.example.capstoneshopping.Viewmodel.GroceryViewModel
+import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.fragment_item_add.*
 import java.time.LocalDate
 import java.time.ZoneId

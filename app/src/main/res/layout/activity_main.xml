@@ -30,6 +30,16 @@
         app:srcCompat="@android:drawable/ic_input_add"
         tools:ignore="ContentDescription" />
 
+    <Button
+        android:id="@+id/btnScan"
+        android:layout_width="296dp"
+        android:layout_height="58dp"
+        android:layout_gravity="bottom|center_vertical"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:backgroundTint="@color/colorPrimary"
+        android:text="@string/scan_barcode" />
+
     <include layout="@layout/content_main" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
