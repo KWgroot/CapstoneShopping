@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/addGroceryFragment">
+    app:startDestination="@id/groceryListFragment">
     <fragment
-        android:id="@+id/addGroceryFragment"
-        android:name="com.example.capstoneshopping.UI.AddGroceryFragment"
+        android:id="@+id/groceryListFragment"
+        android:name="com.example.capstoneshopping.UI.GroceryListFragment"
         android:label="fragment_fridgelist"
         tools:layout="@layout/fragment_fridgelist" >
         <action
-            android:id="@+id/action_addGroceryFragment_to_groceryAdapter"
-            app:destination="@id/groceryAdapter" />
+            android:id="@+id/action_groceryListFragment_to_addGroceryFragment"
+            app:destination="@id/addGroceryFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/groceryAdapter"
-        android:name="com.example.capstoneshopping.UI.GroceryAdapter"
+        android:id="@+id/addGroceryFragment"
+        android:name="com.example.capstoneshopping.UI.AddGroceryFragment"
         android:label="fragment_item_add"
         tools:layout="@layout/fragment_item_add" >
         <action
-            android:id="@+id/action_groceryAdapter_to_addGroceryFragment"
-            app:destination="@id/addGroceryFragment" />
+            android:id="@+id/action_addGroceryFragment_to_groceryListFragment"
+            app:destination="@id/groceryListFragment" />
     </fragment>
 </navigation>
