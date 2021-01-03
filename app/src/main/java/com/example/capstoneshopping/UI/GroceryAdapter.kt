@@ -1,5 +1,6 @@
 package com.example.capstoneshopping.UI
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,12 +12,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.capstoneshopping.R
 import com.example.capstoneshopping.Viewmodel.Grocery
 import kotlinx.android.synthetic.main.item.view.*
+import java.time.ZoneId
 
 class GroceryAdapter(private val groceries: List<Grocery>): RecyclerView.Adapter<GroceryAdapter.ViewHolder>(){
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        @SuppressLint("SetTextI18n")
         fun databind(grocery: Grocery){
             itemView.tvProduct.text = grocery.product
-            itemView.tvDate.text = grocery.date.toString()
+            val date = grocery.date
+            val localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
+            val day = localDate.dayOfMonth
+            val month = localDate.month
+
+            itemView.tvDate.text = "Placed in fridge on: $day $month"
         }
     }
 

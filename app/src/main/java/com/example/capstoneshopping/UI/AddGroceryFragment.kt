@@ -41,10 +41,13 @@ class AddGroceryFragment : Fragment() {
     private fun onAddGrocery(){
         val groceryName = tiProduct.text.toString()
 
-        val formatter = DateTimeFormatter.ofPattern("dd MM")
+        /*val formatter = DateTimeFormatter.ofPattern("dd MM yyyy")
         val currentDate = LocalDate.now().toString()
         val date = LocalDate.parse(currentDate, formatter)
-        val result: ZonedDateTime = date.atStartOfDay(ZoneId.systemDefault())
+        val result: ZonedDateTime = date.atStartOfDay(ZoneId.systemDefault())*/
+
+        val currentDate = LocalDate.now()
+        val result: ZonedDateTime = currentDate.atStartOfDay(ZoneId.systemDefault())
 
         if (groceryName.isNotBlank()){
             viewModel.insertGrocery(Grocery(
