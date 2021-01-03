@@ -75,16 +75,16 @@ class MainActivity : AppCompatActivity() {
     private fun scanBarcode(){
         val scanner = IntentIntegrator(this)
 
-        scanner.initiateScan()
+        scanner.initiateScan() //Starts a google API to open the camera and look for barcodes and QR codes.
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) { //The scanner is implemented as an activity and as such can be caught like this.
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (resultCode == Activity.RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) { //If the camera opened succesfully continue.
             val result =
                 IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
-            if (result != null) {
+            if (result != null) { //If a code with any content is scanned, continue.
                 if (result.contents == null) {
                     Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
                 } else {

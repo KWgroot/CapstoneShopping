@@ -17,6 +17,8 @@ abstract class GroceryRoomDatabase: RoomDatabase() {
     companion object{
         private const val DATABASE_NAME = "GROCERY_DATABASE"
 
+        //Generate the ROOM database and return the instance when asked for.
+
         @Volatile
         private var groceryRoomDatabaseInstance: GroceryRoomDatabase? = null
 

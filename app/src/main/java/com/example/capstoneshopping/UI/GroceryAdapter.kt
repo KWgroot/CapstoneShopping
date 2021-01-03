@@ -22,7 +22,7 @@ class GroceryAdapter(private val groceries: List<Grocery>): RecyclerView.Adapter
             val date = grocery.date
             val localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
             val day = localDate.dayOfMonth
-            val month = localDate.month
+            val month = localDate.month //Convert the date into a nice string that shows the day and month ONLY
 
             itemView.tvDate.text = "Placed in fridge on: $day $month"
         }

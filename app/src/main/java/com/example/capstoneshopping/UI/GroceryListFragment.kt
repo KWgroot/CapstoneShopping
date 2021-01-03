@@ -33,13 +33,13 @@ class GroceryListFragment : Fragment(){
         observeAddGrocery()
     }
 
-    private fun observeAddGrocery(){
+    private fun observeAddGrocery(){ //Always check for changes made and apply them directly.
         viewModel.groceries.observe(viewLifecycleOwner, Observer { groceries ->
             this.groceries.clear()
             this.groceries.addAll(groceries)
             this.groceries.sortBy { it.date }
 
-            groceryAdapter.notifyDataSetChanged()
+            groceryAdapter.notifyDataSetChanged() //Update visuals.
         })
     }
 

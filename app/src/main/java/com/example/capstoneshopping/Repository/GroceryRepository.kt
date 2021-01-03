@@ -15,6 +15,8 @@ class GroceryRepository(context: Context) {
         groceryDao = database!!.groceryDao()
     }
 
+    //Calls to perform actions set by the DAO to alter database information.
+
     fun getAllProducts(): LiveData<List<Grocery>>{
         return groceryDao.getAllProducts() ?: MutableLiveData(emptyList())
     }

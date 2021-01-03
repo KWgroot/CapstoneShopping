@@ -40,9 +40,9 @@ class AddGroceryFragment : Fragment() {
     }
 
     private fun onAddGrocery(){
-        val groceryName = tiProduct.text.toString()
+        val groceryName = tiProduct.text.toString() //Get the manually input name for the product
 
-        val currentDate = LocalDate.now()
+        val currentDate = LocalDate.now() //Get the current day of the month because a year is not needed for a fridge storage.
         val result: ZonedDateTime = currentDate.atStartOfDay(ZoneId.systemDefault())
 
         if (groceryName.isNotBlank()){

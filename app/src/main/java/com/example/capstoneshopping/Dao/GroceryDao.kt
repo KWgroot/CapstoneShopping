@@ -10,6 +10,9 @@ import com.example.capstoneshopping.Viewmodel.Grocery
 @Dao
 interface GroceryDao {
 
+    //When the Data Access Object(s) are called perform simple
+    //database operations to alter/update information.
+
     @Query("SELECT * FROM product_table")
     fun getAllProducts(): LiveData<List<Grocery>>
 
