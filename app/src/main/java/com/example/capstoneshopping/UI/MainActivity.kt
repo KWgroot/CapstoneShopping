@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                     if (groceryName.isNotBlank()) {
                         viewModel.insertGrocery(
                             Grocery(
-                                groceryName, Date.from(resultDate.toInstant())
+                                groceryName, Date.from(resultDate.toInstant()), 1
                             )
                         )
                     } else {

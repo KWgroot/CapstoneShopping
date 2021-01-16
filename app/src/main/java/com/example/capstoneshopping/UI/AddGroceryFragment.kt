@@ -53,7 +53,7 @@ class AddGroceryFragment : Fragment() {
 
         if (groceryName.isNotBlank()){
             viewModel.insertGrocery(Grocery(
-                groceryName, Date.from(result.toInstant())
+                groceryName, Date.from(result.toInstant()), 1
             ))
         } else {
             Toast.makeText(activity, R.string.no_product, Toast.LENGTH_SHORT).show()

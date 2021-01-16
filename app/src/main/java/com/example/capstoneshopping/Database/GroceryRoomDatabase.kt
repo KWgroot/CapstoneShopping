@@ -15,7 +15,7 @@ abstract class GroceryRoomDatabase: RoomDatabase() {
     abstract fun groceryDao(): GroceryDao
 
     companion object{
-        private const val DATABASE_NAME = "GROCERY_DATABASE"
+        private const val DATABASE_NAME = "GROCERY_DB"
 
         //Generate the ROOM database and return the instance when asked for.
 

@@ -13,7 +13,7 @@ interface GroceryDao {
     //When the Data Access Object(s) are called perform simple
     //database operations to alter/update information.
 
-    @Query("SELECT * FROM product_table")
+    @Query("SELECT * FROM grocery_table")
     fun getAllProducts(): LiveData<List<Grocery>>
 
     @Insert
@@ -22,6 +22,6 @@ interface GroceryDao {
     @Delete
     suspend fun deleteGrocery(grocery: Grocery)
 
-    @Query("DELETE FROM product_table")
+    @Query("DELETE FROM grocery_table")
     suspend fun deleteAll()
 }
