@@ -39,10 +39,6 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
-        btnScan.setOnClickListener {
-            scanBarcode()
-        }
-
         fabToggler()
     }
 
@@ -70,12 +66,6 @@ class MainActivity : AppCompatActivity() {
                 addFab.show()
             }
         }
-    }
-
-    private fun scanBarcode(){
-        val scanner = IntentIntegrator(this)
-
-        scanner.initiateScan() //Starts a google API to open the camera and look for barcodes and QR codes.
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) { //The scanner is implemented as an activity and as such can be caught like this.

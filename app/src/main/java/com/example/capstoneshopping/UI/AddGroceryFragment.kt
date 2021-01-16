@@ -1,5 +1,7 @@
 package com.example.capstoneshopping.UI
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -37,6 +39,10 @@ class AddGroceryFragment : Fragment() {
             onAddGrocery()
             findNavController().popBackStack()
         }
+
+        btnScan.setOnClickListener {
+            scanBarcode()
+        }
     }
 
     private fun onAddGrocery(){
@@ -52,5 +58,11 @@ class AddGroceryFragment : Fragment() {
         } else {
             Toast.makeText(activity, R.string.no_product, Toast.LENGTH_SHORT).show()
         }
+    }
+
+    private fun scanBarcode(){
+        val scanner = IntentIntegrator(activity)
+
+        scanner.initiateScan() //Starts a google API to open the camera and look for barcodes and QR codes.
     }
 }
