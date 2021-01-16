@@ -32,4 +32,8 @@ class GroceryRepository(context: Context) {
     suspend fun deleteAll(){
         groceryDao.deleteAll()
     }
+
+    suspend fun updateGrocery(grocery: Grocery){
+        groceryDao.updateGrocery(grocery)
+    }
 }

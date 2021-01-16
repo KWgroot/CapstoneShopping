@@ -11,6 +11,17 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="59dp"
+            android:layout_height="51dp"
+            android:text="@string/amountOfProduct"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnIncrease"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/tvProduct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,6 +53,27 @@
             app:layout_constraintTop_toBottomOf="@+id/tvProduct"
             app:layout_constraintVertical_bias="0.0"
             tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnDecrease"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:text="@string/btnDecrease"
+            android:textAlignment="textStart"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvAmount"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnIncrease"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/btnIncrease"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

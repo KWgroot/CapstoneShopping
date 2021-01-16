@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -14,6 +15,7 @@ import com.example.capstoneshopping.R
 import com.example.capstoneshopping.Viewmodel.Grocery
 import com.example.capstoneshopping.Viewmodel.GroceryViewModel
 import kotlinx.android.synthetic.main.fragment_fridgelist.*
+import kotlinx.android.synthetic.main.item.*
 
 class GroceryListFragment : Fragment(){
     private lateinit var groceryAdapter: GroceryAdapter

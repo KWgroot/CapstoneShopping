@@ -9,5 +9,10 @@
     <string name="no_product">Please enter a product.</string>
     <string name="deleted_groceries">Cleared fridge.</string>
     <string name="scan_barcode">Scan barcode</string>
+    <string name="amountOfProduct">99</string>
+    <string name="most_recent_items">Most recent items</string>
+    <string name="btnDecrease">-</string>
+    <string name="btnIncrease">+</string>
+    <string name="suggested_items">Suggested products</string>
 
 </resources>

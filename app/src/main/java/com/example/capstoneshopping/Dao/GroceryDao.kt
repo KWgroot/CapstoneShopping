@@ -1,10 +1,7 @@
 package com.example.capstoneshopping.Dao
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.example.capstoneshopping.Viewmodel.Grocery
 
 @Dao
@@ -24,4 +21,7 @@ interface GroceryDao {
 
     @Query("DELETE FROM grocery_table")
     suspend fun deleteAll()
+
+    @Update
+    suspend fun updateGrocery(grocery: Grocery)
 }

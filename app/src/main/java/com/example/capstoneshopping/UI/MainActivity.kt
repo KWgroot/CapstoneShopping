@@ -17,11 +17,11 @@ import com.example.capstoneshopping.Viewmodel.GroceryViewModel
 import com.google.zxing.integration.android.IntentIntegrator
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_item_add.*
+import kotlinx.android.synthetic.main.item.*
 import java.time.LocalDate
 import java.time.ZoneId
 import java.time.ZonedDateTime
 import java.util.*
-
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController

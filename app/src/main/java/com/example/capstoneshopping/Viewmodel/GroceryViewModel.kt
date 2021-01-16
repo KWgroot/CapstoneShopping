@@ -25,4 +25,8 @@ class GroceryViewModel(application: Application) : AndroidViewModel(application)
     fun deleteAllGroceries(){
         ioScope.launch { groceryRepository.deleteAll() }
     }
+
+    fun updateGroceries(grocery: Grocery){
+        ioScope.launch { groceryRepository.updateGrocery(grocery) }
+    }
 }
